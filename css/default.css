@@ -10,8 +10,10 @@ body
 
 header, main, footer
 {
-    border: 0px;
+    border: solid black;
+    border-width: 0px 1px;
     margin: 0px auto;
     min-width: {{ layout.minW }};
     max-width: {{ layout.maxW }};
+    padding: 1em 2em;
 }
