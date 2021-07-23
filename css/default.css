@@ -1,6 +1,13 @@
 ---
 ---
 
+body
+{
+    background: #999999;
+    font-family: Sans-Serif;
+    margin: 0px;
+}
+
 header, main, footer
 {
     border: 0px;
