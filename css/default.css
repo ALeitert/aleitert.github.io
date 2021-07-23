@@ -19,20 +19,29 @@ header, main, footer
     padding: 1em 2em;
 }
 
+
+/***  Header  ***/
+
 header
 {
     background: #c4d1e2;
-    color: #6280a4
 }
 
 header h1
 {
+    color: #6280a4;
     margin: 0px;
 }
+
+
+/***  Main  ***/
 
 main
 {
 }
+
+
+/***  Footer  ***/
 
 footer
 {
