@@ -10,6 +10,7 @@ body
 
 header, main, footer
 {
+    background: #f2f2f2;
     border: solid black;
     border-width: 0px 1px;
     margin: 0px auto;
@@ -27,4 +28,13 @@ header
 header h1
 {
     margin: 0px;
+}
+
+main
+{
+}
+
+footer
+{
+    font-size: smaller;
 }
