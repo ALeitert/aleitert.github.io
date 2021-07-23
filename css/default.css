@@ -1,0 +1,54 @@
+---
+---
+
+body
+{
+    background: #999999;
+    font-family: Sans-Serif;
+    margin: 0px;
+}
+
+header, main, footer
+{
+    background: #f2f2f2;
+    border: solid black;
+    border-width: 0px 1px;
+    margin: 0px auto;
+    min-width: {{ layout.minW }};
+    max-width: {{ layout.maxW }};
+    padding: 1em 2em;
+}
+
+
+/***  Header  ***/
+
+header
+{
+    background: #c4d1e2;
+}
+
+header h1
+{
+    color: #6280a4;
+    margin: 0px;
+}
+
+
+/***  Main  ***/
+
+main
+{
+}
+
+h1, h2
+{
+    color: #1F497D;
+}
+
+
+/***  Footer  ***/
+
+footer
+{
+    font-size: smaller;
+}

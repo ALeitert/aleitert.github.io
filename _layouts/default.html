@@ -1,9 +1,21 @@
+---
+minW: 640px
+maxW: 1000px
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>{{ page.title | default: site.title }}</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/{{ layout.layout }}.css">
     </head>
     <body>
-        {{ content }}</body>
+        <header>
+            <h1>{{ page.title | default: site.title }}</h1>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+        <footer></footer>
+    </body>
 </html>
