@@ -1,0 +1,10 @@
+---
+---
+
+header, main, footer
+{
+    border: 0px;
+    margin: 0px auto;
+    min-width: {{ layout.minW }};
+    max-width: {{ layout.maxW }};
+}
