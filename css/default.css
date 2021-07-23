@@ -17,3 +17,14 @@ header, main, footer
     max-width: {{ layout.maxW }};
     padding: 1em 2em;
 }
+
+header
+{
+    background: #c4d1e2;
+    color: #6280a4
+}
+
+header h1
+{
+    margin: 0px;
+}
