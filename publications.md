@@ -74,14 +74,14 @@ headers:
 
 # {% if rList != empty %}{{ page.headers.RR }}{% endif %}{% if rList != empty and tList != empty %} and {% endif %}{% if tList != empty %}{{ page.headers.RT }}{% endif %}
     {% endif %}
-<ul>
+<ul class="pubList">
     {% for pub in pGrp %}
 <li>
 <strong>{{ pub.title }}</strong>
 <br>
         {% if pub.type != 'T' %}
             {% for auth in pub.authors %}
-                <em{% if auth contains 'Leitert' %} style="font-weight: bold;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
+                <em{% if auth contains 'Leitert' %} style="font-weight: 600;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
             <br>
        {% endif %}
