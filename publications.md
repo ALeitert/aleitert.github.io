@@ -61,7 +61,10 @@ headers:
     {% for pub in pGrp %}
 <li>
 <strong>{{ pub.title }}</strong>
-{{ pub.content }}
+
+<blockquote id="{{ pType }}_{{ pub.key }}" class="abstract">
+    {{ pub.content }}
+</blockquote>
 </li>
     {% endfor %}
 </ul>
