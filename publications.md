@@ -62,9 +62,16 @@ headers:
 <li>
 <strong>{{ pub.title }}</strong>
 <br>
-        {% for auth in pub.authors %}
-            <em{% if auth contains 'Leitert' %} style="font-weight: bold;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
+        {% if pub.type != 'T' %}
+            {% for auth in pub.authors %}
+                <em{% if auth contains 'Leitert' %} style="font-weight: bold;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        {% else %}
+            {{ pub.tType }},
+            <em>{{ pub.uni }}</em>,
+            {{ pub.month }} {{ pub.year }}{% if pub.comment != nil %},{% endif %}
+            {{ pub.comment }}
+        {% endif %}
         <br>
 
         {% if pub.arXiv != nil %}[<a href="https://arxiv.org/abs/{{ pub.arXiv }}">arXiv</a>]{% endif %}
