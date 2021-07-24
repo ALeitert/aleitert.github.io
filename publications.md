@@ -10,7 +10,7 @@ title: Publications
 #               Required.
 
 #        key    A key to use for sorting the papers.
-#               Has the patters MM-YYYY-AAA-AAA-... where MM is the month,
+#               Has the patters YYYY-MM-AAA-AAA-... where MM is the month,
 #               YYYY the year, and AAA the first the letters of the autors
 #               family name.
 
@@ -43,7 +43,7 @@ headers:
 
 {% for pType in page.order %}
 
-    {% assign pGrp = site.publications | where_exp: "item", "item.type == pType" | sort: key, title | reverse %}
+    {% assign pGrp = site.publications | where_exp: "item", "item.type == pType" | sort: 'key' | reverse %}
 
     {% if pGrp == empty %}
         {% continue %}
