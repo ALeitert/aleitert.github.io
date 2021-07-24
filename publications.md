@@ -61,6 +61,10 @@ headers:
     {% for pub in pGrp %}
 <li>
 <strong>{{ pub.title }}</strong>
+<br>
+        {% for auth in pub.authors %}
+            <em{% if auth contains 'Leitert' %} style="font-weight: bold;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
 
 <blockquote id="{{ pType }}_{{ pub.key }}" class="abstract">
     {{ pub.content }}
