@@ -65,6 +65,13 @@ headers:
         {% for auth in pub.authors %}
             <em{% if auth contains 'Leitert' %} style="font-weight: bold;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
         {% endfor %}
+        <br>
+
+        {% if pub.arXiv != nil %}[<a href="https://arxiv.org/abs/{{ pub.arXiv }}">arXiv</a>]{% endif %}
+        {% if pub.doi != nil %}[<a href="https://doi.org/{{ pub.doi }}">doi</a>]{% endif %}
+        {% if pub.pdf != nil %}[<a href="/{{ pub.pdf }}">pdf</a>]{% endif %}
+        {% if pub.slides != nil %}[<a href="/{{ pub.slides }}">slides</a>]{% endif %}
+        {% if pub.git != nil %}[<a href="{{ pub.git }}">git</a>]{% endif %}
 
 <blockquote id="{{ pType }}_{{ pub.key }}" class="abstract">
     {{ pub.content }}
