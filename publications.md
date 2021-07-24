@@ -83,13 +83,49 @@ headers:
             {% for auth in pub.authors %}
                 <em{% if auth contains 'Leitert' %} style="font-weight: bold;"{% endif %}>{{ auth }}</em>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
-        {% else %}
-            {{ pub.tType }},
-            <em>{{ pub.uni }}</em>,
-            {{ pub.month }} {{ pub.year }}{% if pub.comment != nil %},{% endif %}
-            {{ pub.comment }}
+            <br>
+       {% endif %}
+
+
+        {% assign infoLine = "" | split: "/" %}
+
+        {% if pub.type == 'C' or pub.type == 'J' %}
+
+            {% if pub.conference != nil %}{% assign infoLine = infoLine | push: pub.conference %}{% endif %}
+
+            {% if pub.journal != nil %}
+                {% if pub.volume != nil %}
+                    {% assign jStr = pub.journal | append: " " | append: pub.volume %}
+                {% else %}
+                    {% assign jStr = "Accepted for " | append: pub.journal %}
+                {% endif %}
+                {% assign infoLine = infoLine | push: jStr %}
+            {% endif %}
+
+            {% if pub.pages != nil %}{% assign infoLine = infoLine | push: pub.pages %}{% endif %}
+            {% if pub.year != nil %}{% assign infoLine = infoLine | push: pub.year %}{% endif %}
+
+        {% elsif pub.type == 'T' %}
+
+            {% assign infoLine = infoLine | push: pub.tType %}
+
+            {% assign uniName = "<em>" | append: pub.uni | append: "</em>" %}
+            {% assign infoLine = infoLine | push: uniName %}
+
+            {% assign finishDate = pub.month | append: " " | append: pub.year %}
+            {% assign infoLine = infoLine | push: finishDate %}
+
+            {% if pub.comment != nil %}{% assign infoLine = infoLine | push: pub.comment %}{% endif %}
+
         {% endif %}
+
+        {% if infoLine != empty %}
+        {% for info in infoLine %}
+            {{ info }}{% if forloop.last %}.{% else %},{% endif %}
+        {% endfor %}
         <br>
+        {% endif %}
+
 
         [<a href="javascript:toggleAbstract('{{ pType }}_{{ pub.key }}')">abstract</a>]
         {% if pub.arXiv != nil %}[<a href="https://arxiv.org/abs/{{ pub.arXiv }}">arXiv</a>]{% endif %}
