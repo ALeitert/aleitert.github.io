@@ -1,0 +1,24 @@
+---
+title: Computing the Union Join and Subset Graph of Acyclic Hypergraphs in Subquadratic Time
+authors:
+  - A. Leitert
+
+key: 2021-10-Lei
+
+type: C
+conference: WADS 2021
+
+journal: Lecture Notes in Computer Science
+volume: 12808
+
+arXiv: 2104.06636
+slides: conf/wads21.pdf
+---
+
+We investigate the two problems of computing the union join graph as well as computing the subset graph for acyclic hypergraphs and their subclasses.
+In the <em>union join graph</em>&nbsp;$G$ of an acyclic hypergraph&nbsp;$H$, each vertex of&nbsp;$G$ represents a hyperedge of&nbsp;$H$ and two vertices of&nbsp;$G$ are adjacent if there exits a join tree&nbsp;$T$ for&nbsp;$H$ such that the corresponding hyperedges are adjacent in&nbsp;$T$.
+The <em>subset graph</em> of a hypergraph&nbsp;$H$ is a directed graph where each vertex represents a hyperedge of&nbsp;$H$ and there is a directed edge from a vertex&nbsp;$u$ to a vertex&nbsp;$v$ if the hyperedge corresponding to&nbsp;$u$ is a subset of the hyperedge corresponding to&nbsp;$v$.
+
+For a given hypergraph&nbsp;$H = (V, \mathcal{E})$, let $n = |V|$, $m = |\mathcal{E}|$, and $N = \sum_{E \in \mathcal{E}} |E|$.
+We show that, if the Strong Exponential Time Hypothesis is true, both problems cannot be solved in $\mathcal{O} \bigl( N^{2 - \varepsilon} \bigr)$ time for $\alpha$-acyclic hypergraphs and any constant $\varepsilon > 0$, even if the created graph is sparse.
+Additionally, we present algorithms that solve both problems in $\mathcal{O} \bigl( N^2 / \log N + |G| \bigr)$ time for $\alpha$-acyclic hypergraphs, in $\mathcal{O} \bigl( N \log (n + m) + |G| \bigr)$ time for $\beta$-acyclic hypergaphs, and in $\mathcal{O} \bigl( N + |G| \bigr)$ time for $\gamma$-acyclic hypergraphs as well as for interval hypergraphs, where $|G|$ is the size of the computed graph.
