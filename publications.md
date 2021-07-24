@@ -41,6 +41,23 @@ headers:
   T: Thesis
 ---
 
+<script type="text/javascript">
+    function toggleAbstract(paperID)
+    {
+        var abstractDiv = document.getElementById(paperID);
+
+        if (abstractDiv.style.display == 'none' || abstractDiv.style.display == '')
+        {
+            abstractDiv.style.display = 'block';
+        }
+        else
+        {
+            abstractDiv.style.display = 'none';
+        }
+    }
+</script>
+
+
 {% for pType in page.order %}
 
     {% assign pGrp = site.publications | where_exp: "item", "item.type == pType" | sort: 'key' | reverse %}
@@ -74,6 +91,7 @@ headers:
         {% endif %}
         <br>
 
+        [<a href="javascript:toggleAbstract('{{ pType }}_{{ pub.key }}')">abstract</a>]
         {% if pub.arXiv != nil %}[<a href="https://arxiv.org/abs/{{ pub.arXiv }}">arXiv</a>]{% endif %}
         {% if pub.doi != nil %}[<a href="https://doi.org/{{ pub.doi }}">doi</a>]{% endif %}
         {% if pub.pdf != nil %}[<a href="/{{ pub.pdf }}">pdf</a>]{% endif %}
