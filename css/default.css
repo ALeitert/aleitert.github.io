@@ -11,7 +11,7 @@ body
 
 header, main, footer
 {
-    background: #f2f2f2;
+    background: hsl(34, 2%, 98%);
     border: solid black;
     border-width: 0px 1px;
     margin: 0px auto;
@@ -38,13 +38,13 @@ a:hover
 
 header
 {
-    background: #c4d1e2;
+    background: hsl(214, 34%, 83%);
 }
 
 header h1
 {
     font-weight: 600;
-    color: #6280a4;
+    color: hsl(214, 27%, 51%);
     margin: 0px;
 }
 
@@ -59,7 +59,7 @@ h1, h2
 {
     font-weight: 600;
     margin: 1.2em 0px 0.5em 0px;
-    color: #1F497D;
+    color: hsl(214, 60%, 31%);
 }
 
 
