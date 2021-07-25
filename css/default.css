@@ -152,6 +152,11 @@ article main h1
     font-size: xx-large;
 }
 
+article main p
+{
+    font-size: larger;
+}
+
 
 /***  Footer  ***/
 
