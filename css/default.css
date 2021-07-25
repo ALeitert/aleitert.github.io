@@ -3,21 +3,18 @@
 
 body
 {
-    background: #999999;
+    background: hsl(34, 2%, 98%);
     font-family: 'Open Sans', Sans-Serif;
     line-height: 1.5;
     margin: 0px;
 }
 
-nav, header, main, footer
+nav, main, footer
 {
-    background: hsl(34, 2%, 98%);
-    border: solid black;
-    border-width: 0px 1px;
     margin: 0px auto;
     min-width: {{ layout.minW }};
     max-width: {{ layout.maxW }};
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
 }
 
 a
@@ -37,22 +34,19 @@ a:hover
 
 #navDiv
 {
-    width: 100%;
-    position: fixed;
-    display: table-cell;
+    background-color: hsl(214, 61%, 15%);
+
     align-items: center;
-    vertical-align: middle;
+    position: fixed;
     height: 3.5rem;
+    width: 100%;
 }
 
 nav
 {
-    background-color: hsl(214, 61%, 15%);
-    border-color: hsl(214, 61%, 15%);
-
     /* Shift by 0.5rem to adjust for padding of links (a-tags). */
-    padding-left: 4.5rem;
-    padding-right: 5.5rem;
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
 }
 
 nav a
@@ -75,14 +69,23 @@ nav a:hover
 header
 {
     background: hsl(214, 34%, 83%);
-    padding-top: 4.5rem; /* 1 (default) + 3.5 (nav bar) */
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    padding-top: 3.5rem; /* nav bar */
 }
 
 header h1
 {
-    font-weight: 600;
+    background: hsl(214, 34%, 83%);
     color: hsl(214, 27%, 51%);
-    margin: 0px;
+    font-weight: 600;
+
+    display: block;
+    margin: 0px auto;
+    min-width: {{ layout.minW }};
+    max-width: {{ layout.maxW }};
+    padding: 1rem 2rem;
 }
 
 
