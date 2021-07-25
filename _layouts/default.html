@@ -29,7 +29,9 @@ maxW: 1000px
     <body>
         <div id="navDiv">
             <nav>
-                <a href="/">Home</a>
+                {% for item in site.navItems %}
+                    <a href="{{ item[1] }}">{{ item[0] }}</a>
+                {% endfor %}
             </nav>
         </div>
         <header>
