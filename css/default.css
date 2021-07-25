@@ -49,6 +49,24 @@ nav
 {
     background-color: hsl(214, 61%, 15%);
     border-color: hsl(214, 61%, 15%);
+
+    /* Shift by 0.5rem to adjust for padding of links (a-tags). */
+    padding-left: 4.5rem;
+    padding-right: 5.5rem;
+}
+
+nav a
+{
+    color: hsl(34, 2%, 98%);
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+nav a:hover
+{
+    background-color: hsl(214, 61%, 31%);
+    color: hsl(34, 2%, 98%);
+    text-decoration: none;
 }
 
 
