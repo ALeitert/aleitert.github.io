@@ -77,7 +77,6 @@ header
 
 header h1
 {
-    background: hsl(214, 34%, 83%);
     color: hsl(214, 27%, 51%);
     font-weight: 600;
 
@@ -121,6 +120,36 @@ blockquote.abstract
     padding: 0.5em 0em;
     margin: 0px;
     display: none;
+}
+
+
+/***  Articles  ***/
+
+article header
+{
+    background-color: hsl(34, 2%, 98%);
+    padding: 3rem 0rem;
+    text-align: right;
+}
+
+article header h1
+{
+    color: hsl(214, 60%, 31%);
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    width: 100%;
+    padding: 1rem 0;
+}
+
+article main
+{
+    padding: 0;
+}
+
+article main h1
+{
+    font-size: xx-large;
 }
 
 
