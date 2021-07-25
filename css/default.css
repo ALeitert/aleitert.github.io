@@ -9,7 +9,7 @@ body
     margin: 0px;
 }
 
-header, main, footer
+nav, header, main, footer
 {
     background: hsl(34, 2%, 98%);
     border: solid black;
@@ -33,12 +33,31 @@ a:hover
 }
 
 
+/***  Navigation  ***/
+
+#navDiv
+{
+    width: 100%;
+    position: fixed;
+    display: table-cell;
+    align-items: center;
+    vertical-align: middle;
+    height: 3.5rem;
+}
+
+nav
+{
+    background-color: hsl(214, 61%, 15%);
+    border-color: hsl(214, 61%, 15%);
+}
+
 
 /***  Header  ***/
 
 header
 {
     background: hsl(214, 34%, 83%);
+    padding-top: 4.5rem; /* 1 (default) + 3.5 (nav bar) */
 }
 
 header h1
