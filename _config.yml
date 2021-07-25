@@ -33,3 +33,7 @@ url: "https://aleitert.github.io" # the base hostname & protocol for your site, 
 
 collections:
   publications:
+
+navItems:
+  Home: "/"
+  Publications: "/publications/"
