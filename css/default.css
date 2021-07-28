@@ -29,6 +29,12 @@ a:hover
     text-decoration: underline;
 }
 
+/* Ensure default values. */
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+
 
 /***  Navigation  ***/
 
@@ -36,10 +42,10 @@ a:hover
 {
     background-color: hsl(214, 61%, 15%);
 
-    align-items: center;
     position: fixed;
     height: 3.5rem;
     width: 100%;
+    z-index: 256;
 }
 
 nav
@@ -145,15 +151,6 @@ article header h1
 article main
 {
     padding: 0;
-}
-
-article main h1
-{
-    font-size: xx-large;
-}
-
-article main p
-{
     font-size: larger;
 }
 
