@@ -8,7 +8,7 @@ maxW: 800px
         <meta charset="utf-8">
         <title>
             {{ site.title }}
-            {% if page.title != nil %}- {{ page.title }}{% endif %}
+            {% if page.title != nil and page.title != site.title %}- {{ page.title }}{% endif %}
         </title>
         <link rel="stylesheet" type="text/css" media="screen" href="/css/{{ layout.layout }}.css">
 
