@@ -133,6 +133,7 @@ headers:
         {% if pub.pdf != nil %}[<a href="/{{ pub.pdf }}">pdf</a>]{% endif %}
         {% if pub.slides != nil %}[<a href="/{{ pub.slides }}">slides</a>]{% endif %}
         {% if pub.git != nil %}[<a href="{{ pub.git }}">git</a>]{% endif %}
+        {% if pub.gif != nil %}[<a href="/images/{{ pub.gif }}">gif</a>]{% endif %}
 
 <blockquote id="{{ pType }}_{{ pub.key }}" class="abstract">
     {{ pub.content }}
