@@ -4,8 +4,6 @@ description: Generates small graphs and allows to export them as TikZ code.
 
 layout: default
 
-higlight: true
-
 links:
   git: https://github.com/ALeitert/Graph-Generator
 ---

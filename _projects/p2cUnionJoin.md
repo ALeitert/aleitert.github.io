@@ -3,7 +3,6 @@ title: "Union Join and Subset Graph of Acyclic Hypergraphs"
 description: Implementation of the algorithms in my paper "Computing the Union Join and Subset Graph of Acyclic Hypergraphs in Subquadratic Time". Work in progress.
 
 layout: default
-higlight: true
 
 links:
   git: https://github.com/ALeitert/p2c-Union-Join-Graph

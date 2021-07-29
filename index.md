@@ -1,5 +1,10 @@
 ---
 title: Dr. Arne Leitert
+
+projects:
+  - p2cUnionJoin
+  - graphGen
+  - tbVsStb
 ---
 
 # Biography
@@ -17,9 +22,10 @@ Erdős number: 3
 
 # Selected Projects
 
+
 <ul id="selProjList">
-{% assign hlProj = site.projects | where_exp: "item", "item.higlight" %}
-{% for proj in hlProj %}
+{% for projName in page.projects %}
+    {% assign proj = site.projects | where_exp:"item", "item.slug == projName" | first %}
     <li>
         <strong><a href="{{ proj.url }}">{{ proj.title }}</a></strong>
         {% if proj.partners != nil %}
