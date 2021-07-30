@@ -8,7 +8,8 @@ links:
   git: https://github.com/ALeitert/p2c-Union-Join-Graph
 ---
 
-Goal of this project is to implement the algorithms in my paper [1].
+
+Goal of this project is to implement the algorithms in my paper [5].
 It investigates the two problems of computing the union join graph as well as computing the subset graph for acyclic hypergraphs and their subclasses.
 
 The *union join graph $G$* of a given acyclic hypergraph $H$ is the union of all its join trees.
@@ -19,66 +20,78 @@ The *subset graph* of a hypergraph $H$ is a directed graph $G$ where each vertex
 
 # Computing the Subset Graph
 
-A core part of the algorithms in [1] is the computation of a subset graph.
+A core part of the algorithms in [5] is the computation of a subset graph.
 Indeed, most algorithms to compute union join graphs use a subset graph algorithm.
 The paper presents such algorithms for β-acyclic, γ-acyclic, and interval hypergraphs.
 For α-acylic hypergraphs, however, we need a subset graph algorithm for general graphs.
 We also need such an algorithm to test our implementation.
 
-Pritchard [2] present algorithms in their paper which compute the subset graph for an arbitrary hypergraph.
+Pritchard [6] present algorithms in their paper which compute the subset graph for an arbitrary hypergraph.
 They start with a simple, high-level algorithm and then modify it two times with the goal of improving the runtime.
 Pritchard shows that the runtime with all these modifications is in $\mathcal{O} \bigl( N^2 \log \log N / \log^2 N \bigr)$.
 
-
-## Runtime Tests
-
-I implemented four algorithms to compute subset graphs:
-
- 1. A naive algorithm that checks each pair of hyperedges and determines if one is subset of the other.
-
- 2. Pritchard's simple approach (see section 2 in [2]).
-    It is a high-level approach without much optimisation that is foundation for the algorithms below.
-    A core part of their algorithm is the computation of intersections of sets.
-
- 3. Pritchard's algorithm a more compact representation for sets (see section 3 in [2]).
-    We call these *reduced sets*.
-    These sets allow for a faster computation of intersections.
-
- 4. Pritchard's refined algorithm with sorting of vertices and hyperedges plus a "history" of already computed intersections (see section 4 in [2]).
-    The idea for this approach is to keep track of previously computed intersection to avoid computing them again.
-    To maximise the benefit of that, vertices and hyperedges are sorted in the begining.
-
-When testing the algorithms, I generated 5000 random test cases with maximum size of 2000 hyperedges per hypergraph.
-Note that each algorithm recieved the same 5000 hypergraphs (ensured by resetting the random number seed).
-
-The times in the table below state the runtime for these tests.
-The measured times include the generation of all test gases, the computation of the subset graph, and the verification of results.
-In addition to the actual algorithms, I did run a reference-test which "solved" the problems by simply copying the generated solution.
-That way, we get an estimation for how much of the measured time belongs to generation and verification.
-
-
-| Algorithm           |   Time | Difference |
-| :-----------------: | -----: | ---------: |
-| Reference           |  6.8 s |            |
-| Naive               | 53.6 s |     46.8 s |
-| Pritchard Simple    | 15.0 s |      8.2 s |
-| + Reduced Sets      |  9.5 s |      2.7 s |
-| + Sorting + History | 10.8 s |      4.0 s |
-
-
-One can clearly see that Pritchard's approach (even in its simplest form) is much faster than a naive implementation.
+Runtime tests clearly show that Pritchard's approach (even in its simplest form) is much faster than a naive implementation.
 Using reduced sets then gives an additional improvement.
+
+
+# Computing a Union Join Graph
+
+To verify the correctnes of a computed union join graph, we use an approach which is based on [Kruskal's MST algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm).
+That approach was suggested in [1].
+To do so, we first compute the weighted linegraph $L$ of a given hypergraph.
+We then use a modification of Kruskal's algorithm to compute the union of all maximum spanning trees of $L$.
+
+The algorithm is surprisingly fast.
+Most-likely, due to the simplicity and efficiency of Kruskal's algorithm.
+
+
+# "Parsing" Hypergraphs
+
+For each class of hypergraphs, it is importatn that we determine a characteristig property, order, or structure of a given hypergraph.
+That include a join tree for α- and β-acylic hypergraphs, a pruning sequence for γ-acyclic hypergraphs, and a join path for interval hypergraphs.
+
+To compute a join tree, we use the algorithm from [7].
+
+An algorithm for computing a pruning sequence is given in [2].
+Their algorithm relies on the recognition of cographs.
+To do that, we use an algorithm from [4].
+
+To compute the join path of an interval hypergraph, we use the algorithm presented in [3].
 
 
 # References
 
-[[1]](https://arxiv.org/abs/2104.06636)
+[[1]](https://arxiv.org/abs/1607.02911)
+A. Berry, G. Simonet:
+Computing the atom graph of a graph and the union join graph of a hypergraph.
+*arXiv* 1607.02911, 2016.
+
+[[2]](https://doi.org/10.1016/S0304-3975(00)00234-6)
+G. Damiand, M. Habib, C. Paul:
+A simple paradigm for graph recognition: application to cographs and distance hereditary graphs.
+*Theoretical Computer Science* 263, 99-111, 2001.
+
+[[3]](https://doi.org/10.1016/S0304-3975(97)00241-7)
+M. Habib, R. McConnell, C. Paul, L. Viennot:
+Lex-BFS and partition refinement, with applicationsto transitive orientation, interval graph recognition and consecutive ones testing.
+*Theoretical Computer Science* 234, 59-84, 2000.
+
+[[4]](https://doi.org/10.1016/j.dam.2004.01.011)
+M. Habib, C. Paul:
+A simple linear time algorithm for cograph recognition.
+*Discrete Applied Mathematics* 145, 183-197, 2005.
+
+[[5]](https://arxiv.org/abs/2104.06636)
 A. Leitert:
 Computing the Union Join and Subset Graph of Acyclic Hypergraphs in Subquadratic Time.
 *arXiv* 2104.06636, 2021.
 
-[[2]](https://link.springer.com/article/10.1007/PL00009272)
+[[6]](https://link.springer.com/article/10.1007/PL00009272)
 P. Pritchard:
 A Fast Bit-Parallel Algorithm for Computing the Subset Partial Order.
 *Algorithmica* 24, 76-86, 1999.
 
+[[7]](https://epubs.siam.org/doi/abs/10.1137/0213035)
+R.E. Tarjan, M. Yannakakis:
+Simple Linear-Time Algorithms to Test Chordality of Graphs, Test Acyclicity of Hypergraphs, and Selectively Reduce Acyclic Hypergraphs.
+*SIAM J. Comput.* 13 (3), 566–579, 1984.
