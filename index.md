@@ -3,8 +3,8 @@ title: Dr. Arne Leitert
 
 projects:
   - p2cUnionJoin
-  - graphGen
   - tbVsStb
+  - graphGen
 ---
 
 # Biography
