@@ -9,12 +9,14 @@ projects:
 
 # Biography
 
-I am currently Assistant Professor at the [Department of Computer Science](https://www.cwu.edu/computer-science/), [Central Washington University](https://www.cwu.edu/) in Ellensburg, Washington, USA.
+Since 2022, I am cloud database engineer at [RisingWave Labs](https://www.risingwave-labs.com/) in Singapore.
+We are building a cloud native streaming database.
+Before that, I was Assistant Professor at the [Department of Computer Science](https://www.cwu.edu/computer-science/), [Central Washington University](https://www.cwu.edu/) in Ellensburg, Washington, USA.
 
-I recieved my Ph.D. form Kent State University, Ohio, USA in 2017.
-My advisor was [Dr. Feodor F. Dragan](http://www.cs.kent.edu/~dragan/).
-Before that, I studied computer science in my home town at the [University of Rostock](https://www.informatik.uni-rostock.de/en/), Germany.
+I studied computer science in my home town at the [University of Rostock](https://www.informatik.uni-rostock.de/en/), Germany.
 The advisor for my Master's Thesis was [Dr. Andreas Bradstädt](https://users.informatik.uni-rostock.de/~ab/).
+Afterwards, I went to [Kent State University](https://www.kent.edu/), Ohio, USA.
+There, I received my Ph.D. in 2017 under supervision of [Dr. Feodor F. Dragan](http://www.cs.kent.edu/~dragan/).
 
 Erdős number: 3  
 (P. Erdős — D. Kratsch — A. Brandstädt / F.F. Dragan — A. Leitert)
