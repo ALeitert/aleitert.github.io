@@ -1,6 +1,6 @@
 ---
 title: "Range Minimum Query"
-description: Implementation of various Range Minimum Query algorithms.
+description: Implementation of various Range Minimum Query algorithms in C++ (and partially Rust).
 
 layout: default
 
@@ -69,6 +69,13 @@ We write that the runtime of an algorithm is in $\bigl \langle \mathcal{O} \bigl
 We also implemented an algorithm that computes the lowest common ancestor of two nodes in a tree.
 The algorithm uses an Euler tour of the given tree and then performs a RMQ on that tour as described in [1].
 For that it can use any of the RMQ algorithms described above.
+
+
+## Rust Implementation
+
+The original implementation was in C++.
+I also started a reimplementation in Rust which can be found in the [RMQ.rs](https://github.com/ALeitert/RMQ.rs) repository.
+
 
 ## References
 
