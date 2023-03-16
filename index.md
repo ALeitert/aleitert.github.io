@@ -2,9 +2,9 @@
 title: Dr. Arne Leitert
 
 projects:
+  - rmq
   - p2cUnionJoin
   - tbVsStb
-  - graphGen
 ---
 
 # Biography
