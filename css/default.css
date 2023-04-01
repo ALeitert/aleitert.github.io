@@ -99,7 +99,6 @@ nav #linkBox a img
 
 header
 {
-    background: hsl(214, 34%, 83%);
     margin: 0;
     max-width: 100%;
     padding: 0;
@@ -107,14 +106,16 @@ header
 
 header h1
 {
-    color: hsl(214, 27%, 51%);
-    font-weight: 600;
+    color: hsl(214, 61%, 15%);
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-align: center;
 
     display: block;
-    margin: 0px auto;
     min-width: {{ layout.minW }};
     max-width: {{ layout.maxW }};
-    padding: 1rem 2rem;
+    padding: 4rem 0rem 2rem 0rem;
+    margin: -1rem auto;
 }
 
 
@@ -122,6 +123,7 @@ header h1
 
 main
 {
+    text-align: justify;
 }
 
 h1, h2

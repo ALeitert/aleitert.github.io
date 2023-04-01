@@ -1,5 +1,5 @@
 ---
-title: "Union Join and Subset Graph of Acyclic Hypergraphs"
+title: "Union Join and Subset Graph of Acyclic&nbsp;Hypergraphs"
 description: Implementation of the algorithms in my paper "Computing the Union Join and Subset Graph of Acyclic Hypergraphs in Subquadratic Time". Work in progress.
 
 layout: default

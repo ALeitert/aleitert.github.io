@@ -20,7 +20,7 @@ Subsequently, these algorithms have two runtimes.
 We write that the runtime of an algorithm is in $\bigl \langle \mathcal{O} \bigl( f(n) \bigr), \mathcal{O} \bigl( g(n) \bigr) \bigr \rangle$ time if the pre-processing runs in $\mathcal{O} \bigl( f(n) \bigr)$ time, and a single query runs in $\mathcal{O} \bigl( g(n) \bigr)$ time.
 
 
-## Implemented Algorithms
+# Implemented Algorithms
 
   * **No Pre-Processing.**
     As the name suggests, this algorithm does not do any pre-processing at all.
@@ -64,20 +64,20 @@ We write that the runtime of an algorithm is in $\bigl \langle \mathcal{O} \bigl
     These properties allow the following overall runtime: $\bigl\langle \mathcal{O}(n), \mathcal{O}(1) \bigr\rangle$.
 
 
-## Lowest Common Ancestor
+# Lowest Common Ancestor
 
 We also implemented an algorithm that computes the lowest common ancestor of two nodes in a tree.
 The algorithm uses an Euler tour of the given tree and then performs a RMQ on that tour as described in [1].
 For that it can use any of the RMQ algorithms described above.
 
 
-## Rust Implementation
+# Rust Implementation
 
 The original implementation was in C++.
 I also started a reimplementation in Rust which can be found in the [RMQ.rs](https://github.com/ALeitert/RMQ.rs) repository.
 
 
-## References
+# References
 
 [1] M.A. Bender, M. Farach-Colton:
     The LCA Problem Revisited.
