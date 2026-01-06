@@ -9,9 +9,9 @@ projects:
 
 # Biography
 
-Since 2022, I am cloud database engineer at [RisingWave Labs](https://www.risingwave-labs.com/) in Singapore.
-We are building a cloud native streaming database.
-Before that, I was Assistant Professor at the [Department of Computer Science](https://www.cwu.edu/computer-science/), [Central Washington University](https://www.cwu.edu/) in Ellensburg, Washington, USA.
+Currently, I am Senior Lecturer at the [College of Computing and Data Science](https://www.ntu.edu.sg/computing) of [Nanyang Technological University](https://www.ntu.edu.sg/) in Singapore.
+From 2022 to 2025, I was cloud engineer at [RisingWave Labs](https://www.risingwave-labs.com/) in Singapore.
+Before that, I worked as Assistant Professor at the [Department of Computer Science](https://www.cwu.edu/computer-science/), [Central Washington University](https://www.cwu.edu/) in Ellensburg, Washington, USA.
 
 I studied computer science in my home town at the [University of Rostock](https://www.informatik.uni-rostock.de/en/), Germany.
 The advisor for my Master's Thesis was [Dr. Andreas Bradstädt](https://users.informatik.uni-rostock.de/~ab/).
