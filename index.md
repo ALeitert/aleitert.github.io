@@ -20,28 +20,3 @@ There, I received my Ph.D. in 2017 under supervision of [Dr. Feodor F. Dragan](h
 
 Erdős number: 3  
 (P. Erdős — D. Kratsch — A. Brandstädt / F.F. Dragan — A. Leitert)
-
-
-# Selected Projects
-
-
-<ul id="selProjList">
-{% for projName in page.projects %}
-    {% assign proj = site.projects | where_exp:"item", "item.slug == projName" | first %}
-    <li>
-        <strong><a href="{{ proj.url }}">{{ proj.title }}</a></strong>
-        {% if proj.partners != nil %}
-            &emsp;&mdash;&emsp;with
-            {% for pName in proj.partners %}
-                {{ pName }}{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-        {% endif %}
-        <br>
-        {{ proj.description }}
-        {% if proj.links != empty %}
-            <br>
-            {% if proj.links.git != nil %}[<a href="{{ proj.links.git }}">git</a>]{% endif %}
-        {% endif %}
-    </li>
-{% endfor %}
-</ul>
