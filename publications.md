@@ -2,29 +2,29 @@
 title: Publications
 
 # --- Properties of publication Entries ---
-
+#
 #      title    The title of the publication.
 #               Required.
-
+#
 #     autors    A list of all autors.
 #               Required.
-
+#
 #        key    A key to use for sorting the papers.
 #               Has the patters YYYY-MM-AAA-AAA-... where MM is the month,
 #               YYYY the year, and AAA the first the letters of the autors
 #               family name.
-
+#
 #       type    The type of the publication.
 #               J - journal paper
 #               C - conference paper
 #               R - under review or technical report
 #               T - Thesis
 #               Required.
-
+#
 # conference    The conference where the paper is published at.
 #               Required if type = C.
-
-# journal       The journal where the paper is published at.
+#
+#    journal    The journal where the paper is published at.
 #               Required if type = J.
 
 order:
